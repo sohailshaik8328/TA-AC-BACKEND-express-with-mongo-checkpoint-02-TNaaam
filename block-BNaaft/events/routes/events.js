@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
         if(err) return next(err);
         var allCategories = [];
         events.filter((event) => {
+            console.log(event.category)
             let splittedCategory = event.category.split(',');
             for(var i = 0 ; i < splittedCategory.length ; i++) {
                 if(!allCategories.includes(splittedCategory[i])) {
