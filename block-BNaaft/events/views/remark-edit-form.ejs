@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remark-Edit</title>
+    <script src="https://kit.fontawesome.com/914a3e3774.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header_section">
+        <div class="container">
+            <div class="header flex">
+                <a href="/">
+                    <strong>
+                        <img class="logo" src="/images/logo.png" alt="">
+                    </strong>
+                </a>
+
+                <a href="/events ">
+                    <button class="btn">
+                        Back
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="form_section">
+                <form class="remark_form remark_form_edit" action="/remarks/<%= remark.id %>" method="POST">
+                    <textarea name="text" placeholder="Enter Remarks" id="" cols="30"
+                        rows="10"><%= remark.text  %> </textarea>
+                    <input type="text" name="author" placeholder="Enter Author name" value="<%= remark.author  %> ">
+                    <button class="btn remark_btn" type="submit">
+                        Update Remarks
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
