@@ -371,3 +371,12 @@ a {
 main {
   padding: 2rem;
 }
+.ascend_btn {
+  background-color: #00B7FF;
+  margin: 1rem;
+}
+.descend_btn {
+  background-color: #EC6EAD;
+  margin: 1rem;
+
+}
