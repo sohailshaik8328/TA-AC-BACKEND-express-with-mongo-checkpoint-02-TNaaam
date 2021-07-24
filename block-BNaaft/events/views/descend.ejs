@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header_section">
+        <div class="container">
+            <div class="header flex">
+                <a href="/">
+                    <strong>
+                        <img class="logo" src="/images/logo.png" alt="">
+                    </strong>
+                </a>
+
+                <a href="/events">
+                    <button class="btn">
+                        Back
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="events_section flex-70">
+            <div>
+                <% events.forEach(event=> { %>
+                    <div class="event_single">
+                        <h2 class="title">
+                            <%= event.title %>
+                        </h2>
+                        <h3 class="summary">
+                            <%= event.summary %>
+                        </h3>
+
+                        <a href="/events/<%= event.id  %> ">
+                            <button class="btn view_event_btn">
+                                View Event
+                            </button>
+                        </a>
+                    </div>
+                    <% }) %>
+            </div>
+        </section>
+
+        <!-- <% events.forEach(event=> { %>
+            <p>
+                <%= event %>
+            </p>
+            <% }) %> -->
+    </main>
+</body>
+
+</html>
